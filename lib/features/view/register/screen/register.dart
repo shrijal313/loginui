@@ -5,21 +5,24 @@ import 'package:practice1/core/widgets/alt_sign_up.dart';
 import 'package:practice1/core/widgets/continue_button.dart';
 import 'package:practice1/features/view/login/widgets/header.dart';
 import 'package:practice1/features/view/login/widgets/welcomeText.dart';
+import 'package:practice1/features/view/register/widgets/radio_gender.dart';
+
+import '../gender.dart';
 
 class Register extends StatelessWidget {
   final Profile profile;
 
-  const Register.tutor({
+  Register.tutor({
     Key key,
     this.profile = Profile.tutor,
   });
 
-  const Register.guardian({
+  Register.guardian({
     Key key,
     this.profile = Profile.guardian,
   });
 
-  const Register.student({
+  Register.student({
     Key key,
     this.profile = Profile.student,
   });
@@ -85,6 +88,7 @@ class Register extends StatelessWidget {
                     SizedBox(
                       height: 15,
                     ),
+                    this.profile == Profile.tutor ? RadioGender() : SizedBox(),
                     TextFormField(
                       obscureText: true,
                       obscuringCharacter: "⬤",
