@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../profile.dart';
+import '../../../../core/profile.dart';
 
 class Header extends StatelessWidget {
   final Profile profile;

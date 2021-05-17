@@ -23,7 +23,7 @@ class WelcomText extends StatelessWidget {
             style: GoogleFonts.poppins(
               textStyle: TextStyle(
                   color: Colors.black87,
-                  fontSize: 32,
+                  fontSize: 28,
                   fontWeight: FontWeight.w500,
                   letterSpacing: 1),
             ),
