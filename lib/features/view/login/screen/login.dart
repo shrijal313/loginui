@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice1/features/view/login/widgets/header.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -17,17 +18,7 @@ class LoginScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                      width: 200,
-                      height: 300,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(90),
-                          bottomRight: Radius.circular(90),
-                        ),
-                      ),
-                      child: Image.asset("assets/images/boy.png",)),
+                  Header(),
                 ],
               ),
             )
