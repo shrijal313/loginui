@@ -18,7 +18,13 @@ class LoginScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Header(),
+                  Header.student(),
+                  Container(
+                    width: double.infinity,
+                    height: 80,
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                    child: Text("Welcome back", ),
+                  )
                 ],
               ),
             )

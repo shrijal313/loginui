@@ -1,9 +1,27 @@
-
 import 'package:flutter/material.dart';
 
+import '../profile.dart';
+
 class Header extends StatelessWidget {
+  final Profile profile;
   const Header({
     Key key,
+    this.profile,
+  }) : super(key: key);
+
+  const Header.tutor({
+    Key key,
+    this.profile = Profile.tutor,
+  }) : super(key: key);
+
+  const Header.guardian({
+    Key key,
+    this.profile = Profile.guardian,
+  }) : super(key: key);
+
+  const Header.student({
+    Key key,
+    this.profile = Profile.student,
   }) : super(key: key);
 
   @override
@@ -20,9 +38,7 @@ class Header extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                  blurRadius: 40,
-                  spreadRadius: 10,
-                  color: Colors.grey[200])
+                  blurRadius: 40, spreadRadius: 10, color: Colors.grey[200])
             ]),
         child: Align(
           alignment: Alignment.bottomCenter,
@@ -30,10 +46,24 @@ class Header extends StatelessWidget {
             height: 150,
             width: 150,
             child: Image.asset(
-              "assets/images/boy.png",
+              profileAvatar(profile),
               fit: BoxFit.contain,
             ),
           ),
         ));
+  }
+
+  String profileAvatar(Profile profile) {
+    switch (profile) {
+      case Profile.student:
+        return "assets/images/boy.png";
+      case Profile.guardian:
+        return "assets/images/guardian.png";
+      case Profile.tutor:
+        return "assets/images/tutor.png";
+
+      default:
+        return "assets/images/boy.png";
+    }
   }
 }
