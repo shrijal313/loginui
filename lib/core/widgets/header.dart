@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/profile.dart';
+import '../profile.dart';
 
 class Header extends StatelessWidget {
   final Profile profile;
+
   const Header({
     Key key,
     this.profile,
   }) : super(key: key);
 
-  const Header.tutor({
+  const Header.maleTutor({
     Key key,
-    this.profile = Profile.tutor,
+    this.profile = Profile.maleTutor,
+  }) : super(key: key);
+
+  const Header.femaleTutor({
+    Key key,
+    this.profile = Profile.femaleTutor,
   }) : super(key: key);
 
   const Header.guardian({
@@ -63,11 +69,13 @@ class Header extends StatelessWidget {
         return "assets/images/boy.png";
       case Profile.guardian:
         return "assets/images/guardian.png";
-      case Profile.tutor:
-        return "assets/images/tutor.png";
+      case Profile.maleTutor:
+        return "assets/images/maleTutor.png";
+      case Profile.femaleTutor:
+        return "assets/images/femaleTutor.png";
 
       default:
-        return "assets/images/boy.png";
+        return "assets/images/maleTutor.png";
     }
   }
 }

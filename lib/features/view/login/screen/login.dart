@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:practice1/core/widgets/continue_button.dart';
-import 'package:practice1/features/view/login/widgets/header.dart';
+import 'package:practice1/core/widgets/header.dart';
 import 'package:practice1/features/view/login/widgets/login_form.dart';
 import 'package:practice1/features/view/login/widgets/welcomeText.dart';
 

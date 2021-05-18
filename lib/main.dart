@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:practice1/features/view/firstPage.dart';
 import 'package:practice1/features/view/login/screen/login.dart';
 import 'package:practice1/features/view/register/screen/register.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
-      home: Register.tutor(),
+      home: FirstPage(),
     );
   }
 }

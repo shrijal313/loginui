@@ -1,5 +1,1 @@
-enum Profile{
-  tutor,
-  guardian,
-  student 
-}
+enum Profile { maleTutor, femaleTutor, guardian, student }
